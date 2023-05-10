@@ -1,0 +1,67 @@
+1.How to check version of React Js?
+=> (I) Open DeveloperTool in your browser.
+   (II) Go to Source Tab.
+   (III) Check your appName .js file.
+   (IV) Search for "react" or "react-dom" You will find something like below. That will be the version your react-app is using.
+
+
+2.How to change in components of React Js? 
+=>To change a value in the state object, use the this. setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new value(s).
+
+3. How to Create a List View in React Js?
+=>
+import * as React from 'react';
+import { ListViewComponent } from './madhav/listview';
+import './App.css';
+function App() {
+    let lists = [
+        { text: 'Madhav', id: '01' },
+        { text: 'Rutu', id: '02' },
+        { text: 'Umang Painting', id: '03' },
+        { text: 'Rushi', id: '04' },
+        { text: 'Kanu', id: '05' },
+        { text: 'Rudu', id: '06' }
+    ];
+    return (
+    <ListViewComponent id="list" dataSource={lists}/>);
+}
+export default App;
+
+4.Create Increment decrement state change by button click? 
+=>import React from 'react';
+import { useReducer } from 'react';
+
+const InitialData = {counter: 0}
+
+function reducer(state, action) {
+
+    switch (action.type) {
+        case 'INCREMENT':
+            return { counter: state.counter + 1 }
+        case 'DECREMENT':
+            return { counter: state.counter - 1 }
+        case 'RESET':
+            return { counter: state.counter = 0 }
+        default: return state;
+    }
+}
+
+function UseReducer(props) {
+    const [state, dispatch] = useReducer(reducer, InitialData)
+    return (
+        <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h1 className='me-5'>{state.counter}</h1>
+                        <button className='btn btn-danger me-3' onClick={() => dispatch({ type: 'DECREMENT' })}>DECREMENT</button>
+                        <button className='btn btn-success me-3' onClick={() => dispatch({ type: 'INCREMENT' })}>INCREMENT</button>
+                        <button className='btn btn-success me-3' onClick={() => dispatch({ type: 'RESET' })}>RESET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default UseReducer;

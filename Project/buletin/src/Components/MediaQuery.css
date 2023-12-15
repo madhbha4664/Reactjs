@@ -1,0 +1,102 @@
+@media(max-width:1200px){
+    .card_main {
+        justify-content: space-between;
+    }
+    .footer_box{
+        width: 25%;
+    }
+    footer .right{
+        justify-content:left;
+        gap: 40px 75px;
+    }
+}
+@media(max-width:992px){
+    .nav_right{
+        display: none;
+    }
+    .nav_left {
+        width: 100%;
+        justify-content: center;
+    }
+    #welcome h2{
+        font-size: 27px;
+    }
+    #jhon_week .right h1{
+        font-size: 32px;
+    }
+    #update{
+        display: block;
+        text-align: center;
+    }
+    .card{
+        width:30%;
+    }
+    #update .left{
+        max-width:100%;
+    }
+    #update .right{
+        margin-top: 30px;
+        text-align:center;
+    }
+    .footer_box{
+        width:33%;
+    }
+    footer .right{
+        justify-content:center;
+    }
+}
+@media(max-width:768px){
+    #jhon_week{
+        display: block;
+    }
+    #jhon_week .left{
+        width: 100%;
+    }
+    #jhon_week .right{
+        width: 100%;
+        padding: 20px ;
+    }
+    .card{
+        width:45%;
+    }
+    footer{
+        display: block;
+    }
+    footer .left{
+        width: 100%;
+    }
+    footer .right{
+        margin-top: 30px;
+        width: 100%;
+        padding: 10px;
+        justify-content:space-between;
+    }
+}
+@media(max-width:576px){
+    .nav_left {
+        width: auto;
+    }
+    nav ul{
+        display: none;
+    }
+    .bar{
+        display: block;
+        border: 1px solid silver;
+        padding: 7px 10px;
+        font-size: 20px;
+    }
+    #welcome h2{
+        font-size: 20px;  
+    }
+    .card_main{
+        justify-content: center;
+        gap: 50px;
+    }
+    .card{
+        width:100%;
+    }
+    .footer_box{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
